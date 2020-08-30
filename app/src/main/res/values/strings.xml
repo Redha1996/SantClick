@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SantéClick</string>
+    <string name="hopital">Hopital</string>
+    <string name="clinique">Clinique</string>
+    <string name="laboratoire">Laboratoire</string>
+    <string name="pharmacie">Pharmacie</string>
+    <string name="cabinet_medical">Cabinet Medical</string>
+    <string name="radiologue">Radiologue</string>
+    <string name="nous_sommes_dans_la_partie_cabin_et_medical">Nous sommes dans la partie cabin,et medical</string>
+    <string name="c_est_bon">c\'est bon</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="g_n_raliste">Généraliste</string>
+    <string name="ophtalmologiste">Ophtalmologiste</string>
+    <string name="gyn_cologue">Gynécologue</string>
+    <string name="p_diatre">Pédiatre</string>
+    <string name="d_rmatologue">Dérmatologue</string>
+    <string name="orthop_diste">Orthopédiste</string>
+    <string name="chirugien_dentiste">Chirugien Dentiste</string>
+    <string name="psychiatre">Psychiatre</string>
+    <string name="cardiologue">Cardiologue</string>
+    <string name="pneumologue">Pneumologue</string>
+    <string name="gastrologue">Gastrologue</string>
+    <string name="veuillez_choisir_le_sp_cialiste_demand">Veuillez choisir le spécialiste demandé</string>
+    <string name="choissez_un_specialiste">choissez un specialiste</string>
+    <string name="s_inscrire">S\'inscrire</string>
+</resources>
