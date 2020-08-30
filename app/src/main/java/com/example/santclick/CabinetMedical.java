@@ -21,6 +21,7 @@ public class CabinetMedical extends AppCompatActivity {
     private Button pne;
     private Button psy;
     private Button rad;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +36,9 @@ public class CabinetMedical extends AppCompatActivity {
         this.oph = (Button) findViewById(R.id.oph);
         this.ort = (Button) findViewById(R.id.ort);
         this.ped = (Button) findViewById(R.id.ped);
-        this.pne = (Button) findViewById(R.id.pne);
         this.psy = (Button) findViewById(R.id.psy);
         this.rad = (Button) findViewById(R.id.rad);
+        this.pne = (Button) findViewById(R.id.pne);
 
         car.setOnClickListener(new View.OnClickListener() {
             @Override

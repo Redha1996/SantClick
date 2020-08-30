@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private Button cli;
     private Button lab;
     private Button pha;
-    private Button rad;
     private Button hop;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         this.cli = (Button) findViewById(R.id.cli);
         this.lab = (Button) findViewById(R.id.lab);
         this.pha = (Button) findViewById(R.id.pha);
-        this.rad = (Button) findViewById(R.id.rad);
         this.hop = (Button) findViewById(R.id.hop);
 
         cab.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         cli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Clinique = new Intent(getApplicationContext(), Clinique.class);
-                startActivity(Clinique);
+                Intent clinique = new Intent(getApplicationContext(), clinique.class);
+                startActivity(clinique);
 
             }
         });
@@ -63,14 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        rad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent radiologue = new Intent(getApplicationContext(), radiologue.class);
-                startActivity(radiologue);
 
-            }
-        });
         hop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
