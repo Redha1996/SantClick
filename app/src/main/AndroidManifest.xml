@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".pneumologue"></activity>
-        <activity android:name=".oneumologue" />
+        <activity android:name=".pneumologue" />
         <activity android:name=".dermatologue" />
         <activity android:name=".ui.dermatologue" />
         <activity android:name=".gastrologue" />

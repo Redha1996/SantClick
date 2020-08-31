@@ -31,4 +31,5 @@
     <string name="veuillez_choisir_le_sp_cialiste_demand">Veuillez choisir le spécialiste demandé</string>
     <string name="choissez_un_specialiste">choissez un specialiste</string>
     <string name="s_inscrire">S\'inscrire</string>
+    <string name="checkbox">checkbox</string>
 </resources>
