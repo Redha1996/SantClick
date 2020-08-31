@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".pneumologue"></activity>
-        <activity android:name=".pneumologue" />
         <activity android:name=".dermatologue" />
         <activity android:name=".ui.dermatologue" />
         <activity android:name=".gastrologue" />
@@ -29,7 +28,7 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Clinique" />
+        <activity android:name=".clinique" />
         <activity android:name=".CabinetMedical" />
         <activity android:name=".MainActivity">
             <intent-filter>
