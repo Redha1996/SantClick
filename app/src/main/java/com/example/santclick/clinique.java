@@ -39,7 +39,6 @@ public class clinique extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clinique);
-        showList();
         makeApiCall();
 
         // cardio_list = (ListView) findViewById(R.id.clinique_list);
@@ -48,17 +47,17 @@ public class clinique extends AppCompatActivity {
     }
 
 
-        private void showList(){
+        private void showList( List<ListClinique> cliniqueList){
         recyclerView = (RecyclerView) findViewById(R.id.clinic_view);
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        List<String> input = new ArrayList<>();
+       /* List<String> input = new ArrayList<>();
             for (int i = 0; i < 100; i++) {
                 input.add("Test" + i);
-        }// define an adapter
-        mAdapter = new ListAdapterClinique(input);
+        }// define an adapter */
+        mAdapter = new ListAdapterClinique(cliniqueList);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -80,13 +79,14 @@ public class clinique extends AppCompatActivity {
               if (response.isSuccessful() && response.body() != null) {
                   List<ListClinique> ListClinique = response.body().getResults();
                   Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
+                  showList(ListClinique);
 
               } else {
                   showError();
               }
           }
 
-           
+
           @Override
           public void onFailure(Call<RestCliniqueResponse> call, Throwable t) {
               showError();
