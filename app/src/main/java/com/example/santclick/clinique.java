@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -31,8 +32,8 @@ public class clinique extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private static final String BASE_URL = "https://raw.githubusercontent.com/Redha1996/SantClick/master/";
 
-    private static final String BASE_URL = "https://github.com/Redha1996/SantClick/blob/master/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +50,13 @@ public class clinique extends AppCompatActivity {
 
         private void showList(){
         recyclerView = (RecyclerView) findViewById(R.id.clinic_view);
-
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         List<String> input = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            input.add("Test" + i);
+            for (int i = 0; i < 100; i++) {
+                input.add("Test" + i);
         }// define an adapter
         mAdapter = new ListAdapterClinique(input);
         recyclerView.setAdapter(mAdapter);
@@ -64,25 +64,21 @@ public class clinique extends AppCompatActivity {
 
 
     private void makeApiCall(){
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+        Gson gson = new GsonBuilder().setLenient().create();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-
         CliniqueApi cliniqueApi= retrofit.create(CliniqueApi.class);
+
 
         Call<RestCliniqueResponse> call = cliniqueApi.getCliniqueResponse();
 
         call.enqueue(new Callback<RestCliniqueResponse>() {
-          @Override
-          public void onResponse(@NonNull Call<RestCliniqueResponse> call, @NonNull Response<RestCliniqueResponse> response) {
 
+          @Override
+          public void onResponse(Call<RestCliniqueResponse> call, Response<RestCliniqueResponse> response) {
               if (response.isSuccessful() && response.body() != null) {
-                  List<ListClinique> cliniqueList = response.body().getResults();
+                  List<ListClinique> ListClinique = response.body().getResults();
                   Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
 
               } else {
@@ -90,7 +86,7 @@ public class clinique extends AppCompatActivity {
               }
           }
 
-
+           
           @Override
           public void onFailure(Call<RestCliniqueResponse> call, Throwable t) {
               showError();
