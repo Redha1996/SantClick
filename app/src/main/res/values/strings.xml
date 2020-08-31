@@ -28,8 +28,16 @@
     <string name="cardiologue">Cardiologue</string>
     <string name="pneumologue">Pneumologue</string>
     <string name="gastrologue">Gastrologue</string>
-    <string name="veuillez_choisir_le_sp_cialiste_demand">Veuillez choisir le spécialiste demandé</string>
-    <string name="choissez_un_specialiste">choissez un specialiste</string>
     <string name="s_inscrire">S\'inscrire</string>
     <string name="checkbox">checkbox</string>
+    <string name="le_nom">Le nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="t_l_phone">Téléphone</string>
+    <string name="adresse">Adresse</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="ophtalmologue">Ophtalmologue</string>
+    <string name="inscription">Inscription</string>
+    <string name="dermatologue">Dermatologue</string>
+    <string name="gyn_cologue">Gynécologue</string>
 </resources>

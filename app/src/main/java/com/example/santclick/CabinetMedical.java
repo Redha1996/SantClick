@@ -21,6 +21,7 @@ public class CabinetMedical extends AppCompatActivity {
     private Button pne;
     private Button psy;
     private Button rad;
+    private Button ins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class CabinetMedical extends AppCompatActivity {
         this.car = (Button) findViewById(R.id.car);
         this.chirdent = (Button) findViewById(R.id.chirdent);
         this.der = (Button) findViewById(R.id.der);
-        this.gen = (Button) findViewById(R.id.gen);
+        this.gen = (Button) findViewById(R.id.chirdent);
         this.gas = (Button) findViewById(R.id.gas);
         this.gyn = (Button) findViewById(R.id.gyn);
         this.oph = (Button) findViewById(R.id.oph);
@@ -39,6 +40,23 @@ public class CabinetMedical extends AppCompatActivity {
         this.psy = (Button) findViewById(R.id.psy);
         this.rad = (Button) findViewById(R.id.rad);
         this.pne = (Button) findViewById(R.id.pne);
+        this.ins = (Button) findViewById(R.id.ins);
+
+        gen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent generaliste = new Intent(getApplicationContext(),generaliste.class);
+                startActivity(generaliste);
+            }
+        });
+
+        ins.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inscription = new Intent(getApplicationContext(),inscription.class);
+                startActivity(inscription);
+            }
+        });
 
         car.setOnClickListener(new View.OnClickListener() {
             @Override

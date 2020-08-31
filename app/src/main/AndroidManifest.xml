@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pneumologue"></activity>
+        <activity android:name=".inscription"></activity>
+        <activity android:name=".pneumologue" />
         <activity android:name=".dermatologue" />
         <activity android:name=".ui.dermatologue" />
         <activity android:name=".gastrologue" />

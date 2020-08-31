@@ -4,125 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CabinetMedical">
+    tools:context=".CabinetMedical"
+    tools:layout_editor_absoluteX="85dp"
+    tools:layout_editor_absoluteY="47dp">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="402dp"
-        android:layout_height="62dp"
-        app:layout_constraintBottom_toTopOf="@+id/lay2"
+    <Button
+        android:id="@+id/gyn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/gyn_cologue"
+        app:layout_constraintBottom_toTopOf="@+id/oph"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/der" />
 
-        <TextView
-            android:id="@+id/txt"
-            android:layout_width="184dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:text="@string/choissez_un_specialiste" />
+    <Button
+        android:id="@+id/psy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/psychiatre"
+        app:layout_constraintTop_toBottomOf="@+id/oph"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/ins"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="75dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/s_inscrire" />
+    <Button
+        android:id="@+id/oph"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/ophtalmologue"
+        app:layout_constraintTop_toBottomOf="@+id/gyn"
+        tools:layout_editor_absoluteX="0dp" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/rad"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/radiologue"
+        app:layout_constraintTop_toBottomOf="@+id/psy"
+        tools:layout_editor_absoluteX="0dp" />
 
-    <LinearLayout
-        android:id="@+id/lay2"
-        android:layout_width="315dp"
-        android:layout_height="583dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/ort"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/orthop_diste"
+        app:layout_constraintTop_toBottomOf="@+id/rad"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/ped"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/p_diatre"
+        app:layout_constraintTop_toBottomOf="@+id/ort"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/ins"
+        android:layout_width="119dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginLeft="267dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/inscription"
+        app:layout_constraintBottom_toTopOf="@+id/pne"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pne"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/pneumologue"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81">
+        tools:layout_editor_absoluteX="-61dp" />
 
-        <Button
-            android:id="@+id/car"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cardiologue" />
+    <Button
+        android:id="@+id/car"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/cardiologue"
+        app:layout_constraintTop_toBottomOf="@+id/pne"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/chirdent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/chirugien_dentiste" />
+    <Button
+        android:id="@+id/gas"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/gastrologue"
+        app:layout_constraintTop_toBottomOf="@+id/gen"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/der"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/d_rmatologue" />
+    <Button
+        android:id="@+id/der"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/dermatologue"
+        app:layout_constraintBottom_toTopOf="@+id/gyn"
+        app:layout_constraintTop_toBottomOf="@+id/gas"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/gas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/gastrologue" />
+    <Button
+        android:id="@+id/chirdent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/chirugien_dentiste"
+        app:layout_constraintTop_toBottomOf="@+id/car"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/gen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/g_n_raliste" />
-
-        <Button
-            android:id="@+id/gyn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/gyn_cologue" />
-
-        <Button
-            android:id="@+id/oph"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ophtalmologiste" />
-
-        <Button
-            android:id="@+id/ort"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/orthop_diste" />
-
-        <Button
-            android:id="@+id/ped"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/p_diatre" />
-
-        <Button
-            android:id="@+id/pne"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/pneumologue" />
-
-        <Button
-            android:id="@+id/psy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/psychiatre" />
-
-        <Button
-            android:id="@+id/rad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radiologue" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/gen"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/g_n_raliste"
+        app:layout_constraintTop_toBottomOf="@+id/chirdent"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
