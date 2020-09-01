@@ -25,7 +25,7 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
             super(v);
             layout = v;
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            //txtFooter = (TextView) v.findViewById(R.id.secondLine);
         }
     }
 
@@ -69,7 +69,7 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
             }
         });*/
 
-        holder.txtFooter.setText("Footer: " + currentClinique.getName());
+       // holder.txtFooter.setText("Footer: " + currentClinique);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
