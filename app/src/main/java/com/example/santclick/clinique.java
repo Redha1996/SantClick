@@ -1,16 +1,13 @@
 package com.example.santclick;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -18,7 +15,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,6 +35,7 @@ public class clinique extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private SharedPreferences sharedPreferences;
     private Gson gson;
+    private static Gson gsonInstance;
 
 
     @Override
@@ -85,7 +82,12 @@ public class clinique extends AppCompatActivity {
             for (int i = 0; i < 100; i++) {
                 input.add("Test" + i);
         }// define an adapter */
-        mAdapter = new ListAdapterClinique(cliniqueList);
+        mAdapter = new ListAdapterClinique(cliniqueList, new ListAdapterClinique.OnItemClickListener() {
+            @Override
+            public void onItemClick(ListClinique item) {
+                navigateToDetails(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -137,5 +139,26 @@ public class clinique extends AppCompatActivity {
     public void showError (){
         Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
 
+    }
+
+
+
+    public void navigateToDetails(ListClinique listClinique){
+        Intent myIntent = new Intent(clinique.this, Clinique_Details.class);
+        myIntent.putExtra("CliniqueKey", getGson().toJson(listClinique)); //Optional parameters
+        clinique.this.startActivity(myIntent);
+
+
+        Toast.makeText(getApplicationContext(), "navigate good ", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public static Gson getGson() {
+        if(gsonInstance == null){
+            gsonInstance = new GsonBuilder()
+                    .setLenient()
+                    .create();
+        }
+        return gsonInstance;
     }
 }

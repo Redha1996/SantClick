@@ -10,11 +10,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterClinique.ViewHolder> {
-    private List<ListClinique> values;
+    private  List<ListClinique> values;
+    private  OnItemClickListener listener;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
+
+
+    public interface OnItemClickListener {
+        void onItemClick(ListClinique item);
+    }
+
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         TextView txtHeader;
@@ -40,8 +48,9 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    ListAdapterClinique(List<ListClinique> myDataset) {
-        values = myDataset;
+    ListAdapterClinique(List<ListClinique> myDataset, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.listener = listener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -62,12 +71,13 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
         // - replace the contents of the view with that element
         final ListClinique currentClinique = values.get(position);
         holder.txtHeader.setText(currentClinique.getName());
-       /* holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                listener.onItemClick(currentClinique) ;
             }
-        });*/
+        });
 
        // holder.txtFooter.setText("Footer: " + currentClinique);
     }
