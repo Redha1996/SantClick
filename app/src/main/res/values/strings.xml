@@ -40,4 +40,6 @@
     <string name="dermatologue">Dermatologue</string>
     <string name="gyn_cologue">Gynécologue</string>
     <string name="details_descrcript">details descrcript</string>
+    <string name="detail_clinique_adresse">detail clinique adresse</string>
+    <string name="detail_clinique_nemero">detail clinique nemero</string>
 </resources>

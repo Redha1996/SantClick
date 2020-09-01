@@ -26,13 +26,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Clinique_Details extends AppCompatActivity {
     private TextView txtDetail;
+    private TextView txtDetailCAdresse;
+    private TextView txtDetailCNumero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clinique_details);
 
-        txtDetail = findViewById(R.id.detail_clinique_view);
+        txtDetail = findViewById(R.id.detail_clinique_name);
+        txtDetailCAdresse = findViewById((R.id.detail_clinique_adresse));
+        txtDetailCNumero = findViewById((R.id.detail_clinique_numero));
+
+
         Intent intent = getIntent();
         String listCliniquejson = intent.getStringExtra("CliniqueKey");
         ListClinique Clinique = clinique.getGson().fromJson(listCliniquejson, ListClinique.class);
@@ -41,5 +47,7 @@ public class Clinique_Details extends AppCompatActivity {
 
     private void shwoDetail(ListClinique Clinique) {
         txtDetail.setText(Clinique.getName());
+        txtDetailCAdresse.setText("Adresse: " + Clinique.getAdresse());
+        txtDetailCNumero.setText("Telephone : " + Clinique.getTelephone());
     }
 }
