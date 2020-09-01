@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterClinique.ViewHolder> {
-    private List<String> values;
+    private List<ListClinique> values;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -25,11 +25,11 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
             super(v);
             layout = v;
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            //txtFooter = (TextView) v.findViewById(R.id.secondLine);
         }
     }
 
-    public void add(int position, String item) {
+    public void add(int position, ListClinique item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -40,7 +40,7 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    ListAdapterClinique(List<String> myDataset) {
+    ListAdapterClinique(List<ListClinique> myDataset) {
         values = myDataset;
     }
 
@@ -60,16 +60,16 @@ public class ListAdapterClinique extends RecyclerView.Adapter<ListAdapterCliniqu
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final String name = values.get(position);
-        holder.txtHeader.setText(name);
-        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+        final ListClinique currentClinique = values.get(position);
+        holder.txtHeader.setText(currentClinique.getName());
+       /* holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 remove(position);
             }
-        });
+        });*/
 
-        holder.txtFooter.setText("Footer: " + name);
+       // holder.txtFooter.setText("Footer: " + currentClinique);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
