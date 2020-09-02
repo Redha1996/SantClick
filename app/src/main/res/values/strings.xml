@@ -1,4 +1,18 @@
 <resources>
+    <string-array name="Spinner_items">
+        <item>Generaliste</item>
+        <item>Gastrologue</item>
+        <item>Gynécologue</item>
+        <item>Chirurgent dentiste</item>
+        <item>Orthopédiste</item>
+        <item>Dermatologue</item>
+        <item>Ophtalmologiste</item>
+        <item>Cardiologue</item>
+        <item>Pédiatre</item>
+        <item>Pneumologue</item>
+        <item>Psychiatre</item>
+    </string-array>
+    <string name="pr_nom">prenom</string>
     <string name="app_name">SantéClick</string>
     <string name="hopital">Hopital</string>
     <string name="clinique">Clinique</string>
@@ -30,7 +44,6 @@
     <string name="s_inscrire">S\'inscrire</string>
     <string name="checkbox">checkbox</string>
     <string name="le_nom">Le nom</string>
-    <string name="pr_nom">Prénom</string>
     <string name="t_l_phone">Téléphone</string>
     <string name="adresse">Adresse</string>
     <string name="ajouter">Ajouter</string>
