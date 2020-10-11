@@ -12,17 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".inscription"/>
-        <activity android:name=".pneumologue" />
-        <activity android:name=".dermatologue" />
-        <activity android:name=".gastrologue" />
-        <activity android:name=".pediatre" />
-        <activity android:name=".psychiatre" />
-        <activity android:name=".gynecologue" />
-        <activity android:name=".orthopediste" />
-        <activity android:name=".ophtalmologiste" />
-        <activity android:name=".generaliste" />
-        <activity android:name=".chirdent" />
-        <activity android:name=".cardiologue" />
         <activity android:name=".hopital" />
         <activity android:name=".radiologue" />
         <activity android:name=".pharmacie" />

@@ -55,4 +55,8 @@
     <string name="details_descrcript">details descrcript</string>
     <string name="detail_clinique_adresse">detail clinique adresse</string>
     <string name="detail_clinique_nemero">detail clinique nemero</string>
+    <string name="specialiste">specialiste</string>
+    <string name="textview">textview</string>
+    <string name="liste_des_medecins">liste_des_medecins</string>
+    <string name="entrer_specialiste">entrer_specialiste</string>
 </resources>
